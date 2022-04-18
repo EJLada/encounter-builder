@@ -27,6 +27,9 @@ gem "jbuilder"
 # Use Mongoid for MongoDB data storage
 gem "mongoid"
 
+# Use Figaro for env variable security
+gem "figaro"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
