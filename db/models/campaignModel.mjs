@@ -25,16 +25,16 @@ const createCampaign = async (campaignName) => {
 }
 
 /**
- * Read all or selected movies based on provided parameters
+ * Read all or selected Campaigns based on provided parameters
  * @param {Object} filter
  * @returns a promise. Resolves to a JSON object containing the selected
  * Campaign objects
  */
 const findCampaigns = async (filter = {}) => {
-    const query = Campaign.find(filter)
-        .select(['_id', 'campaignName']);
+    const query = Campaign.find(filter);
     return query.exec();
 }
+
 /**
  * Update properties of the Campaign with the selected `_id`.
  * @param {String} _id
@@ -63,6 +63,8 @@ const deleteCampaign = async (_id) => {
     const result = await Campaign.deleteOne({_id: _id});
     return result.deletedCount;
 }
+
+export {createCampaign, findCampaigns, replaceCampaign, deleteCampaign};
 
 
 
