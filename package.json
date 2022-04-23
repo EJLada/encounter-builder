@@ -1,0 +1,33 @@
+{
+  "name": "encounter-builder",
+  "version": "1.0.0",
+  "description": "D&D 5e encounter builder app with React front-end, Node.js, Express, MongoDB back-end",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EJLada/encounter-builder.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "react",
+    "rest",
+    "api"
+  ],
+  "author": "RegularGnoll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EJLada/encounter-builder/issues"
+  },
+  "homepage": "https://github.com/EJLada/encounter-builder#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1"
+  }
+}
