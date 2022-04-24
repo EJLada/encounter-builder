@@ -8,7 +8,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-import db from "./db/dbConnector.mjs";
+// Import route modules for data handling
+import {campaignRouter} from './app/routes/campaigns.mjs';
+
+// Assign route modules for data handling
+app.use('/campaigns', campaignRouter);
 
 app.get("/", (req, res) => {
     res.json({message: "Welcome to RegularGnoll's 5e Encounter Builder!"});
