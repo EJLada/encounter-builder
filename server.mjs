@@ -10,13 +10,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Import route modules for data handling
 import {campaignRouter} from './app/routes/campaigns.mjs';
-import {characterRouter} from './app/routes/characters.mjs'
-import {encounterRouter} from './app/routes/encounters.mjs'
+import {characterRouter} from './app/routes/characters.mjs';
+import {encounterRouter} from './app/routes/encounters.mjs';
+import {monsterRouter} from './app/routes/monsters.mjs';
 
 // Assign route modules for data handling
 app.use('/campaigns', campaignRouter);
 app.use('/characters', characterRouter);
 app.use('/encounters', encounterRouter);
+app.use('/monsters', monsterRouter);
 
 app.get("/", (req, res) => {
     res.json({message: "Welcome to RegularGnoll's 5e Encounter Builder!"});
