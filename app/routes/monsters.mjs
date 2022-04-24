@@ -7,11 +7,14 @@ monsterRouter
         // In this case req.params can contain `ID` for retrieving a single record,
         // `ordering=challenge_rating`, `search=abc` to search for monsters with
         // names containing "abc", etc.
+        let modifiers = {}
+        for (let key in req.query) {
+            modifiers[key] = req.query[key];
+        }
         axios.get('https://api.open5e.com/monsters', {
-            params: req.params
-        })
+            params: modifiers })
             .then(monsters => {
-                res.send(monsters);
+                res.send(monsters.data);
             })
             .catch(err => {
                 res.send(err);

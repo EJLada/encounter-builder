@@ -8,6 +8,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+import db from "./db/dbConnector.mjs";
+
 // Import route modules for data handling
 import {campaignRouter} from './app/routes/campaigns.mjs';
 import {characterRouter} from './app/routes/characters.mjs';
